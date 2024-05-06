@@ -17,43 +17,43 @@
 
 //CREO INFO OGGETTI DEL TEAM
 
-const myListContainer = document.querySelector("ul");
+const ulElement = document.querySelector("ul");
 //CREO UN ARRAY DI OGGETTI 
 
 
 let listTeam = [
     {
-        nome: "Angela Carroll",
-        ruolo: "Cheif Editor",
-        foto: `<img src="./IMG/angela-caroll-chief-editor.jpg">`
+        nome: "Angela Carroll, ",
+        ruolo: "Cheif Editor, ",
+        foto: ""
     },
     {
-        nome: "Angela Lopez",
-        ruolo: "Social Media Manager",
+        nome: "Angela Lopez, ",
+        ruolo: "Social Media Manager, ",
         foto: ''
 
     },
     {
-        nome: "Barbara Ramos",
-        ruolo: "Graphic Designer",
+        nome: "Barbara Ramos, ",
+        ruolo: "Graphic Designer, ",
         foto: ''
 
     },
     {
-        nome: "Scott Estrada",
-        ruolo: "Developer",
+        nome: "Scott Estrada, ",
+        ruolo: "Developer, ",
         foto: ''
 
     },
     {
-        nome: "Walter Gordon",
-        ruolo: "Office Manager",
+        nome: "Walter Gordon, ",
+        ruolo: "Office Manager, ",
         foto: ''
 
     },
     {
-        nome: "Wayne Barnett",
-        ruolo: "Founder Ceo",
+        nome: "Wayne Barnett, ",
+        ruolo: "Founder Ceo, ",
         foto: ''
 
     }
@@ -62,9 +62,14 @@ let listTeam = [
 console.log(listTeam)
 
 for (let i = 0; i < listTeam.length; i++) {
-    for (let chiave in listTeam[i]) {
-        console.log(listTeam[i][chiave])
-    }
+    const liElement = document.createElement("li");
+    ulElement.append(liElement);
+    liElement.append(
+        "Il Team è composto da:",
+        listTeam[i].nome,
+        listTeam[i].ruolo,
+        listTeam[i].foto,
+    );
 
 }
 
