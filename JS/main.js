@@ -61,3 +61,11 @@ let listTeam = [
 
 console.log(listTeam)
 
+for (let i = 0; i < listTeam.length; i++) {
+    for (let chiave in listTeam[i]) {
+        console.log(listTeam[i][chiave])
+    }
+
+}
+
+
