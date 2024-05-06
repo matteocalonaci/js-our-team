@@ -1,0 +1,12 @@
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 22rem;
+
+}
+
+li {
+    border-bottom: 0.01rem solid black;
+    font-size: 2rem;
+}
