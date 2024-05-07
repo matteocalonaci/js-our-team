@@ -15,62 +15,35 @@
 //BONUS
 //La funzione riceve un oggetto e restituisce una stringa di HTML.
 
-//CREO INFO OGGETTI DEL TEAM
 
-const ulElement = document.querySelector("ul");
+
 //CREO UN ARRAY DI OGGETTI 
 
 
+
 let listTeam = [
-    {
-        nome: "Angela Carroll, ",
-        ruolo: "Cheif Editor, ",
-        foto: ""
-    },
-    {
-        nome: "Angela Lopez, ",
-        ruolo: "Social Media Manager, ",
-        foto: ''
+    { nome: "Wayne Barnett", ruolo: "Founder & CEO", immagine: "wayne-barnett-founder-ceo.jpg", },
+    { nome: "Angela Caroll", ruolo: "Chief Editor", immagine: "angela-caroll-chief-editor.jpg", },
+    { nome: "Walter Gordon", ruolo: "Office Manager", immagine: "walter-gordon-office-manager.jpg", },
+    { nome: "Angela Lopez", ruolo: "Social Media Manager", immagine: "angela-lopez-social-media-manager.jpg", },
+    { nome: "Scott Estrada", ruolo: "Developer", immagine: "scott-estrada-developer.jpg", },
+    { nome: "Barbara Ramos", ruolo: "Graphic Designer", immagine: "barbara-ramos-graphic-designer.jpg", }
 
-    },
-    {
-        nome: "Barbara Ramos, ",
-        ruolo: "Graphic Designer, ",
-        foto: ''
 
-    },
-    {
-        nome: "Scott Estrada, ",
-        ruolo: "Developer, ",
-        foto: ''
-
-    },
-    {
-        nome: "Walter Gordon, ",
-        ruolo: "Office Manager, ",
-        foto: ''
-
-    },
-    {
-        nome: "Wayne Barnett, ",
-        ruolo: "Founder Ceo, ",
-        foto: ''
-
-    }
 ]
-
 console.log(listTeam)
 
-for (let i = 0; i < listTeam.length; i++) {
-    const liElement = document.createElement("li");
-    ulElement.append(liElement);
-    liElement.append(
-        "Il Team è composto da:",
-        listTeam[i].nome,
-        listTeam[i].ruolo,
-        listTeam[i].foto,
-    );
+const container = document.getElementById("container");
 
+for (let i = 0; i < listTeam.length; i++) {
+    let membro = listTeam[i]
+
+    container.innerHTML += `<div class="card">
+                            <img src="./img/${membro.immagine}"></img>
+                            <h2>${membro.nome}</h2>
+                            <p>Ruolo: ${membro.ruolo}</p>
+                            </div>`
 }
+
 
 
